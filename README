@@ -11,5 +11,3 @@ set the flask app as a variable to import it:
 # Run locally
 to run the application:
 `flask run`
-
-test
