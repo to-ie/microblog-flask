@@ -1,0 +1,10 @@
+Tutorial location: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+Activate the python environment:
+`source venv/bin/activate`
+
+set the flask app as a variable to import it:
+`export FLASK_APP=microblog.py`
+
+to run the application:
+`flask run`
