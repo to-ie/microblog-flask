@@ -8,6 +8,18 @@ Activate the python environment:
 set the flask app as a variable to import it:
 `export FLASK_APP=microblog.py`
 
+# db migration
+create the migration repository for microblog:
+`flask db init`
+(you probably only need to do this once)
+
+Generates automatic migrations 
+`flask db migrate` 
+ie: `flask db migrate -m "users table"`
+
+To apply the changes to the database:
+`flask db upgrade`
+
 # Run locally
 to run the application:
 `flask run`
