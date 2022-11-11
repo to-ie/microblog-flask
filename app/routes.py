@@ -13,7 +13,7 @@ from datetime import datetime
 from app.forms import EditProfileForm
 from app.forms import EmptyForm
 
-
+# Home page route
 @app.route('/')
 @app.route('/index')
 @login_required
@@ -30,6 +30,7 @@ def index():
     ]
     return render_template('index.html', title='Home', posts=posts)
 
+# Login page 
 @app.route('/login', methods =['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -47,11 +48,13 @@ def login():
         return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
 
+#Log out page
 @app.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('index'))
 
+# Registration page 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
@@ -66,6 +69,7 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title="Register", form=form)
 
+#Profile page
 @app.route('/user/<username>')
 @login_required
 def user(username):
@@ -77,12 +81,14 @@ def user(username):
     form = EmptyForm()
     return render_template('user.html', user=user, posts=posts, form=form)
 
+# Last seen function
 @app.before_request
 def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
 
+# Edit profile page
 @app.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
@@ -129,7 +135,7 @@ def unfollow(username):
             flash('User {} not found.'.format(username))
             return redirect(url_for('index'))
         if user == current_user:
-            flash('You cannot un-follow yourself!')
+            flash('You cannot unfollow yourself!')
             return redirect(url_for('user', username=username))
         current_user.unfollow(user)
         db.session.commit()

@@ -45,6 +45,5 @@ class EditProfileForm(FlaskForm):
                 raise ValidationError('Please use a different username.')
 
 # Empty form for following and unfollowing.
-
 class EmptyForm(FlaskForm):
     submit = SubmitField('Submit')
