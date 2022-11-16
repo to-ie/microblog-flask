@@ -44,3 +44,6 @@ to run the application:
 
 `flask run`
 
+# Activate the python environment:
+
+`source venv/bin/activate`
