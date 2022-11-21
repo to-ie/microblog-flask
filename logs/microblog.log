@@ -78,3 +78,5 @@ Traceback (most recent call last):
 jinja2.exceptions.UndefinedError: '_' is undefined
 2022-11-17 19:24:12,340 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:50]
 2022-11-21 13:21:41,909 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
+2022-11-21 13:38:13,885 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
+2022-11-21 13:43:11,483 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
