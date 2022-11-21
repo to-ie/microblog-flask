@@ -1,4 +1,13 @@
-2022-11-17 19:22:36,023 ERROR: Exception on /register [GET] [in /home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
+2022-11-21 13:54:10,880 ERROR: Exception on / [GET] [in /home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: post.language
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
   File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,75 +17,48 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/routes.py", line 94, in register
-    return render_template('register.html', title="Register", form=form)
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
-    return _render(app, template, context)
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
-    rv = template.render(context)
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/register.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/base.html", line 48, in block 'content'
-    {% block app_content %}{% endblock %}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/register.html", line 5, in block 'app_content'
-    <h1>{{ _('Register') }}</h1>
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/utils.py", line 83, in from_obj
-    if hasattr(obj, "jinja_pass_arg"):
-jinja2.exceptions.UndefinedError: '_' is undefined
-2022-11-17 19:23:11,952 ERROR: Exception on /register [GET] [in /home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/routes.py", line 94, in register
-    return render_template('register.html', title="Register", form=form)
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
-    return _render(app, template, context)
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
-    rv = template.render(context)
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/register.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/base.html", line 48, in block 'content'
-    {% block app_content %}{% endblock %}
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/register.html", line 5, in block 'app_content'
-    <h1>{{ _('Register') }}</h1>
-  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/utils.py", line 83, in from_obj
-    if hasattr(obj, "jinja_pass_arg"):
-jinja2.exceptions.UndefinedError: '_' is undefined
-2022-11-17 19:24:12,340 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:50]
-2022-11-21 13:21:41,909 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
-2022-11-21 13:38:13,885 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
-2022-11-21 13:43:11,483 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/routes.py", line 38, in index
+    posts = current_user.followed_posts().paginate(
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_sqlalchemy/query.py", line 99, in paginate
+    return QueryPagination(
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_sqlalchemy/pagination.py", line 69, in __init__
+    items = self._query_items()
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_sqlalchemy/pagination.py", line 354, in _query_items
+    out = query.limit(self.per_page).offset(self._query_offset).all()
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2772, in all
+    return self._iter().all()
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2907, in _iter
+    result = self.session.execute(
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1714, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 333, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: post.language
+[SQL: SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id, anon_1.post_language AS anon_1_post_language 
+FROM (SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
+FROM post JOIN followers ON followers.followed_id = post.user_id 
+WHERE followers.follower_id = ? UNION SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
+FROM post 
+WHERE post.user_id = ?) AS anon_1 ORDER BY anon_1.post_timestamp DESC
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 25, 0)]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-11-21 13:55:20,169 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
+2022-11-21 13:55:24,785 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
+2022-11-21 13:55:54,937 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]

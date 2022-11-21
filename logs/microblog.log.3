@@ -1,0 +1,85 @@
+2022-11-17 19:22:36,023 ERROR: Exception on /register [GET] [in /home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/routes.py", line 94, in register
+    return render_template('register.html', title="Register", form=form)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/register.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/base.html", line 48, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/register.html", line 5, in block 'app_content'
+    <h1>{{ _('Register') }}</h1>
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: '_' is undefined
+2022-11-17 19:23:11,952 ERROR: Exception on /register [GET] [in /home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/routes.py", line 94, in register
+    return render_template('register.html', title="Register", form=form)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/register.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/base.html", line 48, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/app/templates/register.html", line 5, in block 'app_content'
+    <h1>{{ _('Register') }}</h1>
+  File "/home/theodore/Documents/GitHub/python-flask/microblog/venv/lib/python3.10/site-packages/jinja2/utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: '_' is undefined
+2022-11-17 19:24:12,340 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:50]
+2022-11-21 13:21:41,909 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
+2022-11-21 13:38:13,885 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
+2022-11-21 13:43:11,483 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
+2022-11-21 13:45:52,507 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
+2022-11-21 13:45:58,174 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
+2022-11-21 13:49:35,518 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
