@@ -77,3 +77,4 @@ Traceback (most recent call last):
     if hasattr(obj, "jinja_pass_arg"):
 jinja2.exceptions.UndefinedError: '_' is undefined
 2022-11-17 19:24:12,340 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:50]
+2022-11-21 13:21:41,909 INFO: Microblog startup [in /home/theodore/Documents/GitHub/python-flask/microblog/app/__init__.py:52]
